@@ -29,6 +29,10 @@ jobs:
           echo Hello, world!
           ls -ltra
         working-directory: ./ant-design-vue-jeecg
+      - uses: actions/cache@v2
+        with:
+          path: 'ant-design-vue-jeecg/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('ant-design-vue-jeecg/yarn.lock') }}
       - name: Yarn CLI install
         # You may pin to the exact commit or the version.
         # uses: CultureHQ/actions-yarn@661c6f3a66041c2432bcfb78096b9207304614c8
