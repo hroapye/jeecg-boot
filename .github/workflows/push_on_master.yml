@@ -54,3 +54,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           find ant-design-vue-jeecg/dist -ls
+          cat ant-design-vue-jeecg/dist/index.html
